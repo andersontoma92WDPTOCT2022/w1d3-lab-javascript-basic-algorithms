@@ -99,7 +99,7 @@ In tempor sapien non mauris malesuada luctus at tristique est. Orci varius natoq
 
 
 Vivamus purus enim, lacinia sit amet ante condimentum, facilisis efficitur nisl. Ut porta, leo ac aliquam dapibus, nulla diam malesuada eros, nec dapibus lectus orci a orci. Etiam vitae orci vitae odio tincidunt auctor. Nulla at tincidunt velit. Mauris fermentum neque vel ipsum pharetra, ac rhoncus nibh commodo. Morbi sollicitudin ex eget leo hendrerit, at molestie sapien dictum. Proin id molestie metus. In et malesuada erat. Vestibulum aliquam orci ut aliquam ultricies. Sed tincidunt suscipit mauris feugiat accumsan. Etiam gravida lacus arcu, quis ornare elit pharetra sit amet. Etiam eu metus diam.`;
-//266 - informado na fonte
+//266 palavras - informado na fonte
 
 //paragrafo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget maximus ante, ut cursus ligula. Cras luctus sapien a dui convallis aliquet. Donec sollicitudin, risus a cursus porttitor, ante libero.`;
 //30
@@ -174,3 +174,18 @@ function checkPalindrome(phrase) {
 for (let elemento in arrayFrases) {
   checkPalindrome(arrumaPhrase(arrayFrases[elemento]));
 }
+
+// contagem de palavras
+let contagemET = 0;
+let fatiaTexto = paragrafo;
+
+console.log(paragrafo.indexOf('et'), '<--------');
+
+do {
+  if (fatiaTexto.indexOf('et') > 0) {
+    contagemET++;
+    fatiaTexto = fatiaTexto.slice(fatiaTexto.indexOf('et') + 2);
+  }
+} while (fatiaTexto.indexOf('et') > 0);
+
+console.log(`o parágrafo tem ${contagemET} et <--`);
