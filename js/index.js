@@ -141,10 +141,10 @@ phraseToCheck = 'aamm!bmmaa';
 function arrumaPhrase(frase) {
   return frase
     .toUpperCase()
-    .replace(' ', '')
-    .replace('?', '')
-    .replace('!', '')
-    .replace(',', '');
+    .replaceAll(' ', '')
+    .replaceAll('?', '')
+    .replaceAll('!', '')
+    .replaceAll(',', '');
 }
 
 let arrayFrases = [
@@ -164,7 +164,7 @@ phraseToCheck = arrumaPhrase(phraseToCheck);
 function checkPalindrome(phrase) {
   for (let i = 0; i < phrase.length / 2; i++) {
     if (phrase[i] !== phrase[phrase.length - 1 - i]) {
-      console.log(`${phrase} is NOT palindrome: `);
+      console.log(`${phrase} is NOT palindrome! <<----`);
       return;
     }
   }
