@@ -55,7 +55,12 @@ for (let i = 0; i < hacker1.length; i++) {
   }
 }
 console.log(upperString);
-
+// nome invertido
+let nomeInvetido = '';
+for (let i = hacker2.length - 1; i >= 0; i--) {
+  nomeInvetido += hacker2[i];
+}
+console.log(nomeInvetido);
 /*
 #### Bonus 1:
 Go to [lorem ipsum generator](http://www.lipsum.com/) and:
@@ -63,3 +68,25 @@ Go to [lorem ipsum generator](http://www.lipsum.com/) and:
   - Make your program count the number of words in the string.
   - Make your program count the number of times the Latin word [`et`](https://en.wiktionary.org/wiki/et#Latin) appears.
   */
+// 50 palavras - 1 paragrafo
+
+let paragrafo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis velit id aliquet pretium. Etiam sollicitudin quam et orci vulputate, efficitur pharetra augue sodales. Vivamus tincidunt velit eget nulla iaculis porta. Vestibulum id orci turpis. Phasellus viverra massa eget mi eleifend aliquam. Aliquam nisl velit, feugiat a gravida sed, posuere in ante. Integer mi diam, pharetra quis risus vel, venenatis venenatis leo. Donec luctus felis eget nunc imperdiet tempor. Curabitur vestibulum justo felis, a consequat ipsum sagittis sit amet. Mauris malesuada mauris augue, eget facilisis dolor efficitur vel.
+
+In tempor sapien non mauris malesuada luctus at tristique est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sollicitudin varius neque, in dapibus lectus viverra eu. Praesent placerat suscipit pellentesque. Vestibulum dignissim libero ac tortor fermentum aliquet. Aliquam mauris purus, laoreet eu nulla at, vulputate faucibus lorem. Proin venenatis ipsum est, id aliquam mi dapibus ut. Maecenas sed lobortis urna, ut euismod lectus. Nulla facilisi. Aliquam eget mauris est. Aenean iaculis gravida tempus. Phasellus et sem tortor. Aliquam mattis viverra faucibus.
+
+Vivamus purus enim, lacinia sit amet ante condimentum, facilisis efficitur nisl. Ut porta, leo ac aliquam dapibus, nulla diam malesuada eros, nec dapibus lectus orci a orci. Etiam vitae orci vitae odio tincidunt auctor. Nulla at tincidunt velit. Mauris fermentum neque vel ipsum pharetra, ac rhoncus nibh commodo. Morbi sollicitudin ex eget leo hendrerit, at molestie sapien dictum. Proin id molestie metus. In et malesuada erat. Vestibulum aliquam orci ut aliquam ultricies. Sed tincidunt suscipit mauris feugiat accumsan. Etiam gravida lacus arcu, quis ornare elit pharetra sit amet. Etiam eu metus diam.`;
+//266
+
+//paragrafo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget maximus ante, ut cursus ligula. Cras luctus sapien a dui convallis aliquet. Donec sollicitudin, risus a cursus porttitor, ante libero.`;
+//30
+console.log('ffffffffffffffffffffffffffffffffffffffffffffffff');
+let espaçosEntre = 0;
+for (let index = 0; index < paragrafo.length; index++) {
+  if (paragrafo[index] === ' ' && paragrafo[index - 1] != ' ') {
+    espaçosEntre++;
+  }
+}
+console.log('palavras = ', espaçosEntre + 1);
+
+arrPalavras = paragrafo.split(' ');
+//console.log(arrPalavras);
