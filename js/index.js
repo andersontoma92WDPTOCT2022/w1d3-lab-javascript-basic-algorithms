@@ -136,8 +136,8 @@ Create a new variable phraseToCheck and have it contain some string value. Write
 "Was it a car or a cat I saw?" and "No 'x' in Nixon".
 Hint: If you use Google to help you to find solution to this iteration, you might run into some solutions that use advanced string or array methods (such as join(), reverse(), etc.). However, try to apply the knowledge you currently have since you can build pretty nice solution with just using for loop, if-else statements with some break and continue... Just sayin' :smiley:*/
 let phraseToCheck;
-phraseToCheck = 'aamm!bmmaa';
 
+//corige frases, tirando letras indesejadas
 function arrumaPhrase(frase) {
   return frase
     .toUpperCase()
@@ -158,9 +158,7 @@ let arrayFrases = [
   'Was it a car or a cat I saw?',
   "No 'x' in Nixon",
 ];
-
-phraseToCheck = arrumaPhrase(phraseToCheck);
-
+//checa se palindrome
 function checkPalindrome(phrase) {
   for (let i = 0; i < phrase.length / 2; i++) {
     if (phrase[i] !== phrase[phrase.length - 1 - i]) {
@@ -171,6 +169,7 @@ function checkPalindrome(phrase) {
   console.log(`${phrase} is palindrome:`);
 }
 
+//checa todas as frases no array
 for (let elemento in arrayFrases) {
   checkPalindrome(arrumaPhrase(arrayFrases[elemento]));
 }
