@@ -121,3 +121,56 @@ console.log('palavras = ', espaçosEntre + 1);
 console.log('não conta character - new line -, evita repetido tbm');
 
 console.log(String.fromCharCode('0x0A'), '<--');
+
+console.log('--------- bonus 2 ----------');
+/*
+Create a new variable phraseToCheck and have it contain some string value. Write a code that will check if the value we assigned to this variable is a Palindrome. Here are some examples of palindromes:
+
+"A man, a plan, a canal, Panama!"
+"Amor, Roma"
+"race car"
+"stack cats"
+"step on no pets"
+"taco cat"
+"put it up"
+"Was it a car or a cat I saw?" and "No 'x' in Nixon".
+Hint: If you use Google to help you to find solution to this iteration, you might run into some solutions that use advanced string or array methods (such as join(), reverse(), etc.). However, try to apply the knowledge you currently have since you can build pretty nice solution with just using for loop, if-else statements with some break and continue... Just sayin' :smiley:*/
+let phraseToCheck;
+phraseToCheck = 'aamm!bmmaa';
+
+function arrumaPhrase(frase) {
+  return frase
+    .toUpperCase()
+    .replace(' ', '')
+    .replace('?', '')
+    .replace('!', '')
+    .replace(',', '');
+}
+
+let arrayFrases = [
+  'A man, a plan, a canal, Panama!',
+  'Amor, Roma',
+  'race car',
+  'stack cats',
+  'step on no pets',
+  'taco cat',
+  'put it up',
+  'Was it a car or a cat I saw?',
+  "No 'x' in Nixon",
+];
+
+phraseToCheck = arrumaPhrase(phraseToCheck);
+
+function checkPalindrome(phrase) {
+  for (let i = 0; i < phrase.length / 2; i++) {
+    if (phrase[i] !== phrase[phrase.length - 1 - i]) {
+      console.log(`${phrase} is NOT palindrome: `);
+      return;
+    }
+  }
+  console.log(`${phrase} is palindrome:`);
+}
+
+for (let elemento in arrayFrases) {
+  checkPalindrome(arrumaPhrase(arrayFrases[elemento]));
+}
