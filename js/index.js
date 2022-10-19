@@ -182,10 +182,10 @@ let fatiaTexto = paragrafo;
 console.log(paragrafo.indexOf('et'), '<--------');
 
 do {
-  if (fatiaTexto.indexOf('et') > 0) {
+  if (fatiaTexto.indexOf(' et ') > 0) {
     contagemET++;
-    fatiaTexto = fatiaTexto.slice(fatiaTexto.indexOf('et') + 2);
+    fatiaTexto = fatiaTexto.slice(fatiaTexto.indexOf(' et ') + 4);
   }
-} while (fatiaTexto.indexOf('et') > 0);
+} while (fatiaTexto.indexOf(' et ') > 0);
 
 console.log(`o parágrafo tem ${contagemET} et <--`);
