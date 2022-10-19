@@ -72,8 +72,8 @@ console.log(' ----- ex 3.3 -------');
 
 hacker1 = 'driversName';
 hacker2 = 'navigatorsName';
-let sortido = [hacker1, hacker2].sort();
-console.log(sortido);
+let sortido = [hacker1, hacker2].sort((a, b) => a.localeCompare(b));
+console.log(sortido, 'sortido');
 
 if (hacker1 === hacker2) {
   console.log(`What?! You both have the same name?`);
@@ -117,7 +117,8 @@ for (let index = 0; index < paragrafo.length; index++) {
     //console.log(paragrafo[index]);
   }
 }
-console.log('palavras = ', espaçosEntre + 1);
+console.log('palavras = ', espaçosEntre + 1); // qt de palavras = espaços entre elas + 1
+
 console.log('não conta character - new line -, evita repetido tbm');
 
 console.log(String.fromCharCode('0x0A'), '<--');
